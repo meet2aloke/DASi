@@ -1,0 +1,35 @@
+DASi - Dhruba Aloke Sudeep intelligence Agent
+
+DASi/
+├── ETL/                     # Data extraction & loading pipeline
+│   ├── sql_to_chroma.py     # Main ETL script from SQL Server → Chroma DB
+│   └── config.py            # DB connection config (or .env file)
+│
+├── RAG/                     # Retrieval-Augmented Generation logic
+│   ├── query_chroma.py      # Query and embedding logic
+│   ├── embedder.py          # Embedding model wrappers
+│   └── prompts.py           # Prompt templates for LLM
+│
+├── Chatbot/                 # Chat interface logic (backend)
+│   ├── app.py               # Streamlit or FastAPI backend
+│   ├── chatbot_engine.py    # LLM + RAG orchestration
+│   └── utils.py             # Helper functions
+│
+├── Dashboards/              # Dashboard generation logic
+│   ├── visualizer.py        # Chart rendering (Plotly, Altair)
+│   └── dashboard_templates/ # Store reusable dashboard templates
+│
+├── Data/                    # Temp or sample data
+│   ├── sample_queries.sql
+│   └── outputs/
+│
+├── Config/
+│   └── settings_loader.py  # Centralized configuration loader
+│
+├── Logs/                    # Logging output
+│   └── etl_logs.log
+│
+├── .env                     # Store your DB creds and API keys (gitignore this)
+├── requirements.txt         # Python dependencies
+├── README.md
+└── LICENSE

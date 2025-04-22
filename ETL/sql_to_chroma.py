@@ -1,0 +1,1 @@
+from Config.settings_loader import SQL_SERVER, SQL_DATABASE
